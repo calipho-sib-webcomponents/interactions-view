@@ -20,7 +20,7 @@ View listing protein interaction annotations.
     </style>
     <div class="row">
       <div id="nxOverview" class="col-md-12">
-        <protein-overview></protein-overview>
+        <protein-overview nx-config="{{nxConfig}}"></protein-overview>
       </div>
     </div>
     <div id="noDataWarning" class='alert alert-warning noData' hidden>There is no interaction information available in neXtProt for {{nxEntry}}.
@@ -28,7 +28,7 @@ View listing protein interaction annotations.
     </div>
     <div class="row">
       <div id="nxAnnotations" class="col-md-12">
-        <generic-annotation-section section="interactions" goldOnly="{{goldOnly}}" nx-entry="{{nxEntry}}" count="{{annotationsCount}}"
+        <generic-annotation-section section="interactions" goldOnly="{{goldOnly}}" nx-config="{{nxConfig}}" nx-entry="{{nxEntry}}" count="{{annotationsCount}}"
                                     categories='["INTERACTION-INFO", "ENZYME-REGULATION", "COFACTOR", "BINARY-INTERACTION"]'
                                     category-titles='{"subunit": "overview", "BinaryInteraction": "Binary Interactions"}'>
         </generic-annotation-section>
@@ -38,13 +38,13 @@ View listing protein interaction annotations.
     </div>
     <div class="row">
       <div id="nxKeywords" class="col-md-12">
-        <keywords-section categories='["Ligand"]' count="{{keywordsCount}}">
+        <keywords-section categories='["Ligand"]' count="{{keywordsCount}}"  nx-config="{{nxConfig}}">
         </keywords-section>
       </div>
     </div>
     <div class="row">
       <div id="nxXrefs" class="col-md-12">
-        <xrefs-section categories='["BindingDB","DIP","IntAct","MINT","STRING","SignaLink","BioGrid"]' count="{{xrefsCount}}">
+        <xrefs-section categories='["BindingDB","DIP","IntAct","MINT","STRING","SignaLink","BioGrid"]' count="{{xrefsCount}}"  nx-config="{{nxConfig}}">
         </xrefs-section>
       </div>
     </div>
@@ -55,6 +55,10 @@ View listing protein interaction annotations.
     Polymer({
       is: 'interactions-view',
       properties: {
+        nxConfig: {
+          type: Object,
+          value: {}
+        },
         nxEntry: {
           type: String
         },
