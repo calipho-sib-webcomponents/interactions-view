@@ -15,11 +15,11 @@
   "homepage": "https://github.com/calipho-sib/nextprot-webcomponents/tree/interactions-view",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "protein-overview": "git://github.com/calipho-sib/nextprot-webcomponents.git#protein-overview",
-    "generic-annotation-section": "git://github.com/calipho-sib/nextprot-webcomponents.git#generic-annotation-section",
-    "keywords-section": "git://github.com/calipho-sib/nextprot-webcomponents.git#keywords-section",
-    "xrefs-section": "git://github.com/calipho-sib/nextprot-webcomponents.git#xrefs-section",
-    "shared-styles": "git://github.com/calipho-sib/nextprot-webcomponents.git#shared-styles",
+    "protein-overview": "https://github.com/calipho-sib-webcomponents/protein-overview.git#develop",
+    "generic-annotation-section": "https://github.com/calipho-sib-webcomponents/generic-annotation-section.git#develop",
+    "keywords-section": "https://github.com/calipho-sib-webcomponents/keywords-section.git#develop",
+    "xrefs-section": "https://github.com/calipho-sib-webcomponents/xrefs-section.git#develop",
+    "shared-styles": "https://github.com/calipho-sib-webcomponents/shared-styles.git#develop",
     "bootstrap": "^3.3.7"
   },
   "devDependencies": {
